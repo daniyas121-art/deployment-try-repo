@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: lu63-render-demo
+    runtime: node
+    plan: free
+    rootDir: lu63-render-demo
+    buildCommand: npm ci && npx prisma generate
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
